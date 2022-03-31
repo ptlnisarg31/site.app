@@ -17,7 +17,7 @@ if(isset($_POST['login'])) {
 
 
     try {
-      $SQLQuery = "SELECT * FROM workers WHERE username = :username";
+      $SQLQuery = "SELECT * FROM workers WHERE (username = :username) and (`delete`=0)";
       $statement = $conn->prepare($SQLQuery);
       $statement->execute(array(':username' => $user));
 $i=0;//counting results
@@ -29,7 +29,7 @@ $i=0;//counting results
 $i++;
         if(password_verify($password, $hashed_password)) {
           $_SESSION['w_id'] = $w_id;
-          //$_SESSION['username'] = $username;
+          $_SESSION['username1'] = $user;
           //$_SESSION['password'] = $password;
          // echo $w_id;
          header('location: ../admin-ui/index.php');

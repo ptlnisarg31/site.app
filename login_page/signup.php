@@ -10,11 +10,11 @@ if(isset($_POST['signup-btn'])) {
       $password = $_POST['user-pass'];
 
       $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-      $query= $conn ->prepare("SELECT * FROM users WHERE email = ?");
-      $query->execute([$email]);
+      $query= $conn ->prepare("SELECT * FROM users WHERE username = ?");
+      $query->execute([$username]);
       $result =$query->rowCount();
       if($result>0){
-         $error = "<spam class = 'text-dangar'>Email has already existed! Please choose another one.</spa></p>";
+         $error = "<spam class = 'text-dangar'>username has already existed! Please choose another one.</spa></p>";
       
       }
   else{

@@ -1,12 +1,11 @@
 <?php
 
-$username = 'root';
-$password = '';
+
 $dsn = 'mysql:host=localhost; dbname=login';
 
 try {
 
-  $conn = new PDO($dsn, $username, $password);
+  $conn = new PDO($dsn,'root','');
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch (PDOException $e) {

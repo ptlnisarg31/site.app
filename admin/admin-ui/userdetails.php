@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -318,3 +321,27 @@
 </body>
 
 </html>
+
+
+
+
+
+<?php
+$o_id=$_GET['o_id'];
+    $conn= mysqli_connect("localhost","root","","login");
+     $sql="SELECT * FROM `order` WHERE `o_id`=$o_id";
+     $result= mysqli_query($conn,$sql);
+
+     if(mysqli_num_rows($result)>0) 
+        {
+          
+          while($row = mysqli_fetch_array($result))
+          {
+            echo $row['username']."<br>";
+            echo $row['email']."<br>"; 
+            echo $row['phone_num']."<br>";
+            echo $row['address']."<br>";
+          }
+        }
+     
+     ?>

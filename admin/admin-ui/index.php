@@ -199,7 +199,7 @@
     <?php
     //echo $w_id;
      $conn= mysqli_connect("localhost","root","","login");
-     $sql="SELECT * FROM `order` WHERE w_id=$w_id && hide=0";
+     $sql="SELECT * FROM `order` WHERE (w_id=$w_id)and(hide=0)";
      $result= mysqli_query($conn,$sql);
      //echo $w_id1;
     ?>
@@ -305,8 +305,9 @@
     <?php  
         }
       }
-        
-      
+      $sql1="SELECT * FROM `accept` WHERE (`w_id`=$w_id)and(`stet`='Accept')";
+      $result1= mysqli_query($conn,$sql1);
+     
 ?>
            </div>
              </div>
@@ -323,50 +324,49 @@
                   <table class="table table-borderless datatable">
                     <thead>
                       <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Customer</th>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Customer Name</th>
                         <th scope="col">Product</th>
                         <th scope="col">Price</th>
                         <th scope="col">Status</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <?php
+                    if(mysqli_num_rows($result1) > 0) 
+      {
+        
+        while($row1 = mysqli_fetch_array($result1))
+          {
+            $ao_id=$row1['o_id'];
+            $sql2="SELECT * FROM `order` WHERE o_id=$ao_id";
+            $result2= mysqli_query($conn,$sql2);
+            
+
+            ?>
+                    <?php
+                    if(mysqli_num_rows($result2) > 0) 
+            {
+              
+              while($row2 = mysqli_fetch_array($result2))
+                {
+                  $o_id2=$row1['o_id'];
+                  ?>
                       <tr>
-                        <th scope="row"><a href="#">#2457</a></th>
-                        <td>Brandon Jacob</td>
-                        <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                        <td>$64</td>
-                        <td><span class="badge bg-success">Approved</span></td>
+                        <th scope="row"><a href="userdetails.php?o_id=<?php echo $o_id2?>"><?php echo $row1['o_id'];?></a></th>
+                        <td><a href="userdetails.php?o_id=<?php echo $o_id2?>" class="text-primary"><?php echo $row2['username']; ?></td>
+                        <td><a href="userdetails.php?o_id=<?php echo $o_id2?>" class="text-primary"><?php echo $row2['address']; ?></a></td>
+                        <td><?php //echo $row2['charge']; ?></td>
+                        <td><span class="badge bg-success">work done</span></td>
                       </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2147</a></th>
-                        <td>Bridie Kessler</td>
-                        <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
-                        <td>$47</td>
-                        <td><span class="badge bg-warning">Pending</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2049</a></th>
-                        <td>Ashleigh Langosh</td>
-                        <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
-                        <td>$147</td>
-                        <td><span class="badge bg-success">Approved</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Angus Grady</td>
-                        <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
-                        <td>$67</td>
-                        <td><span class="badge bg-danger">Rejected</span></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#">#2644</a></th>
-                        <td>Raheem Lehner</td>
-                        <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
-                        <td>$165</td>
-                        <td><span class="badge bg-success">Approved</span></td>
-                      </tr>
-                    </tbody>
+                      <?php 
+                      }
+                      }
+                          
+      }
+    }
+                      ?>
+                      
+                    
                   </table>
 
                 </div>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$w_id = $_SESSION['id'];
+$w_id = $_SESSION['w_id'];
 echo "Worker ID : $w_id</br>";
 $conn= mysqli_connect("localhost","root","","login");
 $o_id=$_POST['o_id'];
