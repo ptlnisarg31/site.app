@@ -38,6 +38,6 @@ try {
 }
 else
 {
-    echo "pls enter sema New Password and Re-enter New Password";
+    echo "pls enter same New Password and Re-enter New Password";
 }
 ?>

@@ -23,6 +23,7 @@
 						echo "Login";
 						?></a> 
                     </li>
+                   
 						<?php
 					}
 					?>
@@ -39,7 +40,15 @@
 					                        <li class="active"><a href="contact.php">Contact</a></li>
                         <li class="active"><a href="about.php">About us</a></li>
 
-                   
+                        <li>
+                        <?php
+					if(isset($_SESSION['username'])) {?>
+					 <a href="trackstatus.php"> 
+						<?php
+						echo "Track Status";
+						?></a> 
+                    </li>
+                    <?php } ?>
 					<li>
                       <a href="login_page/user.php">  
 					  <?php
