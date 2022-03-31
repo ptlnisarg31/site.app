@@ -254,7 +254,7 @@
                 </div>
                 <div class="tab-pane fade pt-3" id="profile-change-password">
                   <!-- Change Password Form -->
-                  <form action="passcheng.php" method="post" >
+                  <form action="passchange.php" method="post" >
 
                     <div class="row mb-3">
                       <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>

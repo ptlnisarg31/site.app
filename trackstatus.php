@@ -20,7 +20,7 @@ $id=0;
     <meta charset="UTF-8">
     <!-- Important to make website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Page </title>
+    <title>tracking page </title>
 
     <!-- Link our CSS file -->
     <link rel="stylesheet" href="css/style.css">
@@ -46,7 +46,7 @@ $id=0;
             // {
             ?> 
 
-            <form action="trackstatus.php" method="post"class="order">
+            <form action="trackstatus1.php" method="get"class="order">
                 <fieldset>
                     
                     
@@ -78,7 +78,6 @@ $id=0;
     // }
 // }
 // }
-   
    ?>
     <!-- footer Section Ends Here -->
 

@@ -38,6 +38,13 @@ if(isset($_POST['signup-btn'])) {
   }
 }
 
+   if(isset($statement))
+   { $statement->closeCursor();
+   }
+    $conn = null;
+
+
+
 ?>
 
 
@@ -88,7 +95,7 @@ if(isset($_POST['signup-btn'])) {
           
           </form>
           <form action="signup.php" class="sign-up-form" method="POST" >
-            
+           
               <h2 class="title">Sign up</h2>
             
               <div class="input-field">
@@ -105,7 +112,7 @@ if(isset($_POST['signup-btn'])) {
               </div>
               <input type="submit" name="signup-btn" class="btn" value="Signup">
               <div>
-                <p class="text-dangar" >  <?php echo $error?></p>
+                <p class="text-dangar" >  <?php if(isset($error)){echo $error;}?></p>
               </div>
               <p class="social-text">Or Sign up with social platforms</p>
               
@@ -133,8 +140,8 @@ if(isset($_POST['signup-btn'])) {
           <div class="content">
             <h3>New here ?</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+            Welcome to our Community ! <br>
+            If you don't have an account! Click on the Sign up Button..
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Sign up
@@ -146,8 +153,9 @@ if(isset($_POST['signup-btn'])) {
           <div class="content">
             <h3>One of us ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+            Welcome back!</br>
+            Already have an Account just click on the Sign In Button..
+           
             </p>
             <button class="btn transparent" id="sign-in-btn">
               Sign in
@@ -161,10 +169,3 @@ if(isset($_POST['signup-btn'])) {
     <script src="app.js"></script>
   </body>
 </html>
-<?php
-    $statement->closeCursor();
-    $conn = null;
-
-
-?>
-
