@@ -5,7 +5,6 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Important to make website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose city - Minute maintanunce</title>
 
@@ -21,7 +20,7 @@ session_start();
    <?php
    include 'include/header.php';
    ?>
-    <!-- Navbar Section Ends Here -->
+   
 
     
 	<?php
