@@ -209,7 +209,7 @@
             <div class="card">
     
             <div class="card-body pb-0">
-      <h5 class="card-title">Pending Request &amp; Updates <span>| Today</span></h5>
+      <h5 class="card-title">Pending Request &amp; Updates <span>| Current</span></h5>
 
       <?php 
       $count=1;
@@ -228,9 +228,9 @@
             <div class="news">
             <div class="post-item clearfix">
               <img src="assets/img/messages-<?php echo $count;?>.png" alt="">
-              <h4><a href="#"><?php echo $row['username'];?> wants an urgent IT/Computer technician help from you..</a></h4>
+              <h4><a href="#"><?php echo $row['username'];?> Have some Work For you..</a></h4>
               
-                <p>Area: Bhavnagar , Time:1-2 days , Pay:Nagotiable Tag:Urgent.</p>
+                <p><?php echo "Address : ".$row['address'];?></p>
                
               <div class="align-items-center">
               <form method="post" action='accept.php'>
