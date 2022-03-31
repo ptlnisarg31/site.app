@@ -36,7 +36,7 @@ $connn= mysqli_connect("localhost","root","","login");
 $sql= "SELECT * FROM `workers` WHERE `w_id` = $id";
 $result= mysqli_query($connn,$sql);
 ?>
-    <!-- fOOD sEARCH Section Starts Here -->
+   
 <?php
     if (mysqli_num_rows($result) > 0)
     { ?>
