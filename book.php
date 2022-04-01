@@ -59,8 +59,8 @@ if(isset($_SESSION['id']))
                         <h3><?php echo $row["name"]; ?></h3>
                         <p class="food-price"><?php echo $row["charge"]; ?> &#x20B9;</p>
 
-                        <div class="order-label">Quantity</div>
-                        <input type="number" name="qty" class="input-responsive" value="1" required>
+                        <!-- <div class="order-label">Quantity</div>
+                        <input type="number" name="qty" class="input-responsive" value="1" required> -->
                         
                     </div>
 

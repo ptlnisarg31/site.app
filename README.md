@@ -3,7 +3,7 @@ dev
  done 1 card of admin
  done 2 work done btn in admin
  3 only 6 user show in mini stata   
- form book.php remove quantity and rename price to charge
+ done 4 form book.php remove quantity and rename price to charge
  
 nisarg
             1  dropdown -> new file ->delete/pass/logout
