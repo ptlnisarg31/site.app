@@ -23,7 +23,7 @@ catch (PDOException $e) {
   echo "Error: " . $e->getMessage();
 }
 
-echo "<script>alert('Your Order is Successfully Submitted')</script>";
+echo "<script>alert('Your Order is Successfully Submitted and your order ID is $o_id')</script>";
 echo "<script>location.href='trackstatus.php'</script>";
 
 //echo "your oder id is $o_id";
