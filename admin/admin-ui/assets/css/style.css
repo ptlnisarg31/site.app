@@ -1075,3 +1075,23 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   color: #012970;
 }
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+.float-container{
+  position: relative;
+}
+
+.categories{
+  padding: 4% 0;
+}
+.categories{
+  padding: 20% 0;
+}
+h2{
+  margin-bottom: 10%;
+}
