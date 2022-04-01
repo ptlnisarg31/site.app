@@ -65,7 +65,7 @@ session_start();
                 
                  <img src="images/user1.png"  alt="image" class="img-responsive img-curve" border="3">
 
-               skmf
+               
             </div>
             </a>
 
