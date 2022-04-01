@@ -13,3 +13,9 @@ nisarg
  
  done   5  login.php error user side,lorem ipsum
             6  contact us ,about dummy our info in admin and user sides
+
+
+
+
+            error 
+            email is not updating om db by user sing in 
