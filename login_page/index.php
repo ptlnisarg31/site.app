@@ -6,7 +6,8 @@
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
-    ></script>
+    >
+  </script>
     <link rel="stylesheet" href="style.css" />
     <title>Sign in & Sign up Form</title>
   </head>
@@ -20,11 +21,11 @@
             
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" name="name" placeholder="Username" />
+                <input type="text" name="name" placeholder="Username" required/>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="pass" placeholder="Password" />
+                <input type="password" name="pass" placeholder="Password" required/>
               </div>
               <input type="submit" name="login-btn" value="Login" class="btn solid" />
               <p class="social-text">Or Sign in with social platforms</p>
@@ -50,15 +51,15 @@
             
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" name="user-name" placeholder="Username" />
+                <input type="text" name="user-name" placeholder="Username" required/>
               </div>
               <div class="input-field">
                 <i class="fas fa-envelope"></i>
-                <input type="email" name="user-email" placeholder="Email" />
+                <input type="email" name="user-email" placeholder="Email" required/>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="user-pass" placeholder="Password" />
+                <input type="password" name="user-pass" placeholder="Password" required/>
               </div>
               <input type="submit" name="signup-btn" class="btn" value="Signup">
               <div>

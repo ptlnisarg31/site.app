@@ -13,9 +13,16 @@ if(isset($_POST['signup-btn'])) {
       $query= $conn ->prepare("SELECT * FROM users WHERE username = ?");
       $query->execute([$username]);
       $result =$query->rowCount();
+      if($username==""||$email=""||$password="")
+      {
+        echo "<script>alert('Please enter the required details')</script>";
+        echo "<script>location.href='index.php'</script>";
+      }
+
       if($result>0){
-         $error = "<spam class = 'text-dangar'>username has already existed! Please choose another one.</spa></p>";
-      
+        // $error = "<spam class = 'text-dangar'>username has already existed! Please choose another one.</spa></p>";
+        echo "<script>alert('Username has already existed! Please choose another one.')</script>";
+        echo "<script>location.href='index.php'</script>";
       }
   else{
     try {
@@ -70,11 +77,11 @@ if(isset($_POST['signup-btn'])) {
             
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" name="name" placeholder="Username" />
+                <input type="text" name="name" placeholder="Username" required/>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="pass" placeholder="Password" />
+                <input type="password" name="pass" placeholder="Password" required/>
               </div>
               <input type="submit" name="login-btn" value="Login" class="btn solid" />
               <p class="social-text">Or Sign in with social platforms</p>
@@ -100,15 +107,15 @@ if(isset($_POST['signup-btn'])) {
             
               <div class="input-field">
                 <i class="fas fa-user"></i>
-                <input type="text" name="user-name" placeholder="Username" />
+                <input type="text" name="user-name" placeholder="Username" required/>
               </div>
               <div class="input-field">
                 <i class="fas fa-envelope"></i>
-                <input type="email" name="user-email" placeholder="Email" />
+                <input type="email" name="user-email" placeholder="Email" required/>
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="user-pass" placeholder="Password" />
+                <input type="password" name="user-pass" placeholder="Password" required/>
               </div>
               <input type="submit" name="signup-btn" class="btn" value="Signup">
               <div>
