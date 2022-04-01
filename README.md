@@ -1,7 +1,7 @@
 Pending Works
 dev 
- 1 card of admin
- 2 work done btn in admin
+ done 1 card of admin
+ done 2 work done btn in admin
  3 only 6 user show in mini stata   
  
 nisarg
