@@ -4,9 +4,10 @@ dev
  done 2 work done btn in admin
  doen 3 only 6 user show in mini stata   
  done 4 form book.php remove quantity and rename price to charge
+ done 5 dropdown -> new file ->delete/pass/logout
  
 nisarg
-            1  dropdown -> new file ->delete/pass/logout
+           
             2  track order all user side,order id
    done     3  user and worker sigh in choice write in black font with image
  

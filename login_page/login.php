@@ -2,14 +2,14 @@
 
 require_once 'session.php';
 require_once 'db_connect.php';
-
+$error = "Error: Invalid username or password";
 if(isset($_POST['login-btn'])) {
 
     $user = $_POST['name'];
     $password = $_POST['pass'];
 
     try {
-      $SQLQuery = "SELECT * FROM users WHERE username = :username";
+      $SQLQuery = "SELECT * FROM users WHERE (username = :username) and (`delete`=0)";
       $statement = $conn->prepare($SQLQuery);
       $statement->execute(array(':username' => $user));
 
@@ -17,10 +17,15 @@ if(isset($_POST['login-btn'])) {
         $id = $row['id'];
         $hashed_password = $row['password'];
         $username = $row['username'];
+        $m_num=$row['m_num'];
+        $email=$row['email'];
+
 
         if(password_verify($password, $hashed_password)) {
           $_SESSION['id'] = $id;
           $_SESSION['username'] = $username;
+          $_SESSION['m_num'] = $m_num;
+          $_SESSION['email'] = $email;
         //  $_SESSION['password'] = $password;
           header('location: ../index.php');
         }
@@ -69,7 +74,7 @@ if(isset($_POST['login-btn'])) {
               </div>
               <input type="submit" name="login-btn" value="Login" class="btn solid" />
               <div class="text-dangar" style="color:red;">
-                <p class="text-dangar" style="color:red;">  <?php echo $error ?></p>
+                <p class="text-dangar" style="color:red;">  <?php if(isset($error)){ echo $error; } ?></p>
               </div>
               <p class="social-text">Or Sign in with social platforms</p>
               <div class="social-media">
