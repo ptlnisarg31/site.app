@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
+<?php
+session_start();
+?>
 <head>
     <title>Contact us </title>
     <!-- Meta tag Keywords -->
