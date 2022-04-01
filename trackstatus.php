@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <?php
+
+session_start();
+
 $id=0;
 
 //echo $id;

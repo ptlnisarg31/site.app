@@ -12,5 +12,5 @@ nisarg
  
  done   5  login.php error user side,lorem ipsum
             6  contact us ,about dummy our info in admin and user sides
-            7  header is inconsistent in user side ex: trackstatus,contact,about,categories
+  half done 7  header is inconsistent in user side ex: trackstatus,contact,about,categories
          

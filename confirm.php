@@ -24,7 +24,7 @@ $U_id = $_SESSION['id'];
 	<!-- Navbar Section Ends Here -->
 
 <?php
-$qty=$_POST['qty'];
+
 $name=$_POST['full-name'];
 $contact=$_POST['contact'];
 $email=$_POST['email'];
@@ -61,8 +61,7 @@ $result= mysqli_query($connn,$sql);
                         <h3><?php echo $row["name"]; ?></h3>
                         <p class="food-price">120 &#x20B9;</p> <!-- create dynamic -->
 
-                        <!-- <div class="order-label">Quantity</div>
-                        <input type="number" name="qty" class="input-responsive" value="<?php echo $qty;?>" required> -->
+                 
                         
                     </div>
 

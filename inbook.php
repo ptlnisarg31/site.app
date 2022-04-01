@@ -6,7 +6,7 @@ require_once 'login_page/db_connect.php';
 
 session_start();
 $U_id = $_SESSION['id'];
-$qty=$_POST['qty'];
+
 $name=$_POST['full-name'];
 $contact=$_POST['contact'];
 $email=$_POST['email'];
