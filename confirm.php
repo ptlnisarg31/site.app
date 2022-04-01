@@ -61,8 +61,8 @@ $result= mysqli_query($connn,$sql);
                         <h3><?php echo $row["name"]; ?></h3>
                         <p class="food-price">120 &#x20B9;</p> <!-- create dynamic -->
 
-                        <div class="order-label">Quantity</div>
-                        <input type="number" name="qty" class="input-responsive" value="<?php echo $qty;?>" required>
+                        <!-- <div class="order-label">Quantity</div>
+                        <input type="number" name="qty" class="input-responsive" value="<?php echo $qty;?>" required> -->
                         
                     </div>
 
