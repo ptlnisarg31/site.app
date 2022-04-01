@@ -50,7 +50,7 @@
                     </li>
                     <?php } ?>
 					<li>
-                      <a href="login_page/user.php">  
+                      <a href="user.php">  
 					  <?php
 					if(isset($_SESSION['username'])) {
 					$usn=$_SESSION['username'];
