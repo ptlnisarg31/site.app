@@ -2,7 +2,7 @@ Pending Works
 dev 
  done 1 card of admin
  done 2 work done btn in admin
- 3 only 6 user show in mini stata   
+ doen 3 only 6 user show in mini stata   
  done 4 form book.php remove quantity and rename price to charge
  
 nisarg
