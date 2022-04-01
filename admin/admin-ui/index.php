@@ -36,7 +36,7 @@
 <body>
 
 <?php include "include/header.php";?>
- <!-- ======= Sidebar ======= -->
+ <!-- ======= Sidebar  --- ======= -->
  <aside id="sidebar" class="sidebar">
 
 <ul class="sidebar-nav" id="sidebar-nav">
