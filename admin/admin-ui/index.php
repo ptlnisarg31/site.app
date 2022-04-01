@@ -88,33 +88,41 @@
         <div class="col-lg-8">
           <div class="row">
 
-            <!-- Sales Card -->
+            <?php
+
+                $conn= mysqli_connect("localhost","root","","login");
+                $sql="SELECT * FROM `order` WHERE (w_id=$w_id)and(hide=0)";
+                $result= mysqli_query($conn,$sql);
+                $onum=mysqli_num_rows($result);
+
+
+            ?>
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
 
                 <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <!--  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
+                     <li class="dropdown-header text-start"> 
                       <h6>Filter</h6>
                     </li>
 
                     <li><a class="dropdown-item" href="#">Today</a></li>
                     <li><a class="dropdown-item" href="#">This Month</a></li>
                     <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
+                  </ul> -->
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Sales <span>| Today</span></h5>
+                  <h5 class="card-title">Pending Order Request</h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-cart"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>145</h6>
-                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                      <h6><?php echo $onum;?></h6>
+                      <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
 
                     </div>
                   </div>
@@ -122,13 +130,17 @@
 
               </div>
             </div><!-- End Sales Card -->
-
+<?php
+$sql="SELECT * FROM `order` WHERE w_id=$w_id";
+                $result= mysqli_query($conn,$sql);
+                $ototal=mysqli_num_rows($result);
+                ?>
             <!-- Revenue Card -->
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card revenue-card">
 
                 <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <!-- <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li class="dropdown-header text-start">
                       <h6>Filter</h6>
@@ -137,19 +149,19 @@
                     <li><a class="dropdown-item" href="#">Today</a></li>
                     <li><a class="dropdown-item" href="#">This Month</a></li>
                     <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
+                  </ul> -->
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Revenue <span>| This Month</span></h5>
+                  <h5 class="card-title">Total Order you get</h5><span></span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>$3,264</h6>
-                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                      <h6><?php echo $ototal;?></h6>
+                      <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
 
                     </div>
                   </div>
@@ -157,14 +169,18 @@
 
               </div>
             </div><!-- End Revenue Card -->
-
+            <?php
+                $sql="SELECT * FROM `work_done` WHERE w_id=$w_id";
+                $result= mysqli_query($conn,$sql);
+                $dorder=mysqli_num_rows($result);
+                ?>
             <!-- Customers Card -->
             <div class="col-xxl-4 col-xl-12">
 
               <div class="card info-card customers-card">
 
                 <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <!-- <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li class="dropdown-header text-start">
                       <h6>Filter</h6>
@@ -173,19 +189,19 @@
                     <li><a class="dropdown-item" href="#">Today</a></li>
                     <li><a class="dropdown-item" href="#">This Month</a></li>
                     <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
+                  </ul> -->
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Customers <span>| This Year</span></h5>
+                  <h5 class="card-title">Order Done by You </h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-people"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>1244</h6>
-                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+                      <h6><?php echo $dorder; ?></h6>
+                      <!-- <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span> -->
 
                     </div>
                   </div>
@@ -198,7 +214,7 @@
   
     <?php
     //echo $w_id;
-     $conn= mysqli_connect("localhost","root","","login");
+    // $conn= mysqli_connect("localhost","root","","login");
      $sql="SELECT * FROM `order` WHERE (w_id=$w_id)and(hide=0)";
      $result= mysqli_query($conn,$sql);
      //echo $w_id1;
@@ -305,7 +321,7 @@
     <?php  
         }
       }
-      $sql1="SELECT * FROM `accept` WHERE (`w_id`=$w_id)and(`stet`='Accept')";
+      $sql1="SELECT * FROM `accept` WHERE (`w_id`=$w_id)and(`stet`='Accept')and(done=0)";
       $result1= mysqli_query($conn,$sql1);
      
 ?>
@@ -338,7 +354,7 @@
         while($row1 = mysqli_fetch_array($result1))
           {
             $ao_id=$row1['o_id'];
-            $sql2="SELECT * FROM `order` WHERE o_id=$ao_id";
+            $sql2="SELECT * FROM `order` WHERE o_id=$ao_id ";
             $result2= mysqli_query($conn,$sql2);
             
 
@@ -356,7 +372,80 @@
                         <td><a href="userdetails.php?o_id=<?php echo $o_id2?>" class="text-primary"><?php echo $row2['username']; ?></td>
                         <td><a href="userdetails.php?o_id=<?php echo $o_id2?>" class="text-primary"><?php echo $row2['address']; ?></a></td>
                         <td><?php //echo $row2['charge']; ?></td>
-                        <td><span class="badge bg-success">work done</span></td>
+                        <td><a href="workdone.php?o_id=<?php echo $o_id2; ?>"><span class="badge bg-success">work done</span></a></td>
+                      </tr>
+                      <?php 
+                      }
+                      }
+                          
+      }
+    }
+                      ?>
+                      
+                    
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- End Recent Sales -->
+
+        
+          </div>
+        </div><!-- End Left side columns -->
+
+      </div>
+    </section>
+<?php
+    $sql1="SELECT * FROM `accept` WHERE (`w_id`=$w_id)and(`stet`='Accept')and(done=1)";
+      $result1= mysqli_query($conn,$sql1);
+     
+?>
+    <section class="section dashboard">
+    <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+
+               
+
+                <div class="card-body">
+                  <h5 class="card-title">Work Tracker <span>| Recent</span></h5>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Product</th>
+                        
+                        
+                      </tr>
+                    </thead>
+     <?php
+        if(mysqli_num_rows($result1) > 0) 
+      {
+        
+        while($row1 = mysqli_fetch_array($result1))
+          {
+            $ao_id=$row1['o_id'];
+            $sql2="SELECT * FROM `order` WHERE o_id=$ao_id";
+            $result2= mysqli_query($conn,$sql2);
+            
+
+            ?>
+                    <?php
+                    if(mysqli_num_rows($result2) > 0) 
+            {
+              
+              while($row2 = mysqli_fetch_array($result2))
+                {
+                  $o_id2=$row1['o_id'];
+                  ?>
+                      <tr>
+                        <th scope="row"><?php echo $row1['o_id'];?></th>
+                        <td><?php echo $row2['username']; ?></td>
+                        <td><?php echo $row2['address']; ?></a></td>
+                        <td><?php //echo $row2['charge']; ?></td>
+                        <!-- <td><a href="workdone.php?o_id=<?php // echo $o_id2; ?>"><span class="badge bg-success">work done</span></a></td> -->
                       </tr>
                       <?php 
                       }
