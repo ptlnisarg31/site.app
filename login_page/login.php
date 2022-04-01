@@ -68,8 +68,8 @@ if(isset($_POST['login-btn'])) {
                 <input type="password" name="pass" placeholder="Password" />
               </div>
               <input type="submit" name="login-btn" value="Login" class="btn solid" />
-              <div>
-                <p class="text-dangar" >  <?php echo $error ?></p>
+              <div class="text-dangar" style="color:red;">
+                <p class="text-dangar" style="color:red;">  <?php echo $error ?></p>
               </div>
               <p class="social-text">Or Sign in with social platforms</p>
               <div class="social-media">
@@ -134,8 +134,8 @@ if(isset($_POST['login-btn'])) {
           <div class="content">
             <h3>New here ?</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+              Welcome to our Community ! <br>
+            If you don't have an account! Click on the Sign up Button.. 
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Sign up
@@ -147,8 +147,9 @@ if(isset($_POST['login-btn'])) {
           <div class="content">
             <h3>One of us ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+            Welcome back!</br>
+            Already have an Account just click on the Sign In Button..
+           
             </p>
             <button class="btn transparent" id="sign-in-btn">
               Sign in
