@@ -261,18 +261,8 @@ catch (PDOException $e) {
 
                   <!-- Profile Edit Form -->
                   <form action="update-user1.php" class="needs-validation" method="POST"  enctype="multipart/form-data" novalidate>
-                  <input type="hidden"  name="w_id" value="<?php echo "w_id"; ?>"> 
-                  <div class="row mb-3">
-                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
-                      <div class="col-md-8 col-lg-9">
-                      <!--  <img src="../../admin/Admin-Login/<?php //echo "img";?>" alt="Profile">
-                        <div class="col-md-8 col-lg-9">
-                      <input name="img" type="file" class="form-control" required="required"/>
-                        <div class="invalid-feedback">Please, enter a valid Image!</div>
-                       </div>-->
-                        
-                      </div>
-                    </div> 
+                  <input type="hidden"  name="u_id" value="<?php echo $u_id; ?>"> 
+               
 
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
@@ -281,40 +271,6 @@ catch (PDOException $e) {
                       </div>
                     </div>
 
-                    <!-- <div class="row mb-3">
-                      <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
-                      <div class="col-md-8 col-lg-9">
-                        <textarea name="about" class="form-control" id="about" style="height: 100px"><?php //echo "details";?></textarea>
-                      </div>
-                    </div> -->
-
-                    <!-- <div class="row mb-3">
-                      <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="company" type="text" class="form-control" id="company" value="<?php //echo "company";?>">
-                      </div>
-                    </div> -->
-
-                    <!-- <div class="row mb-3">
-                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="<?php //echo "job";?>">
-                      </div>
-                    </div> -->
-
-                    <!-- <div class="row mb-3">
-                      <label for="City" class="col-md-4 col-lg-3 col-form-label">City</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="city" type="text" class="form-control" id="city" value="<?php //echo "city";?>">
-                      </div>
-                    </div> -->
-
-                    <!-- <div class="row mb-3">
-                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="Address" value="<?php //echo "address";?>">
-                      </div>
-                    </div> -->
 
                     <div class="row mb-3">
                       <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
