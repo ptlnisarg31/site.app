@@ -16,6 +16,3 @@ nisarg
 
 
 
-
-            error 
-            email is not updating om db by user sing in 
