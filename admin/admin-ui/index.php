@@ -329,7 +329,7 @@ $sql="SELECT * FROM `order` WHERE w_id=$w_id";
                
 
                 <div class="card-body">
-                  <h5 class="card-title">Work Tracker <span>| Recent</span></h5>
+                  <h5 class="card-title">Work Accepted <span>| Tracker</span></h5>
 
                   <table class="table table-borderless datatable">
                     <thead>
@@ -402,7 +402,7 @@ $sql="SELECT * FROM `order` WHERE w_id=$w_id";
                
 
                 <div class="card-body">
-                  <h5 class="card-title">Work Tracker <span>| Recent</span></h5>
+                  <h5 class="card-title">Work Completed <span>| Recent</span></h5>
 
                   <table class="table table-borderless datatable">
                     <thead>

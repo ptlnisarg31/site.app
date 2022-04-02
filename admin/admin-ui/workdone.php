@@ -92,9 +92,9 @@ if(mysqli_num_rows($result)>0)
 <section class="categories">
     <div class="container" >
     
-    <h4 class="text-center"> This order is Done</h4>
+    <h4 class="text-center">Your work is completed .. </br>It will be reflacted on user side also..</h4>
     </br>
-    <a href="index.php"><h3 class="text-center">Click hera to see moro order</h3></a>
+    <a href="index.php"><h3 class="text-center">Click here for Dashboard</h3></a>
     </div>
         </section>
 <?php
@@ -108,9 +108,9 @@ else
     
     
     
-    <h4 class="text-center"> This order is Done already</h4>
+    <h4 class="text-center">This work is completed already.</h4>
     </br>
-    <h3 class="text-center">GO for others</h3> </h3>
+    <h3 class="text-center">If there is any technical error notify our admin</h3> </h3>
         </div>
         </section>
  <?php
