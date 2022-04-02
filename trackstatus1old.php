@@ -3,9 +3,36 @@
 </head>
 
 <?php
+session_start();
+echo $u_id=$_SESSION['id'];
+
+$u_id=$_SESSION['id'];
+
+
  include 'include/header.php';
 $conn= mysqli_connect("localhost","root","","login");
 $o_id=$_GET['odarid'];
+
+
+$query="SELECT * FROM `order` WHERE `u_id`=$u_id";
+$nisarg=mysqli_query($conn,$query);
+if (mysqli_num_rows($nisarg) > 0)
+{
+    while($row = mysqli_fetch_array($nisarg))
+    {
+        echo "</br>".$row['o_id'];
+    }
+}
+
+
+
+
+
+
+
+
+
+
 $sql1="SELECT * FROM `order` WHERE `o_id`=$o_id";
 $result2=mysqli_query($conn,$sql1);
 if (mysqli_num_rows($result2) > 0)

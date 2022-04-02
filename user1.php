@@ -74,7 +74,24 @@ catch (PDOException $e) {
  
 
  <!-- ======= Sidebar ======= -->
- <?php include "include/header1.php";?>
+ <?php //include "include/header1.php";?>
+
+ 
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.php" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block"> Account </span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+  </header><!-- End Header -->
+
+
+
  <aside id="sidebar" class="sidebar">
 
 <ul class="sidebar-nav" id="sidebar-nav">
@@ -97,14 +114,14 @@ catch (PDOException $e) {
 
   <li class="nav-item">
     <a class="nav-link collapsed" href="allservices.php">
-      <i class="bi bi-envelope"></i>
+      <i class="bi bi-grid"></i>
       <span>categories</span>
     </a>
   </li><!-- End Contact Page Nav -->
 
   <li class="nav-item">
     <a class="nav-link collapsed" href="city-options.php">
-      <i class="bi bi-envelope"></i>
+      <i class="bi bi-grid"></i>
       <span>City</span>
     </a>
   </li><!-- End Contact Page Nav -->
@@ -134,7 +151,7 @@ catch (PDOException $e) {
   
   <li class="nav-item">
     <a class="nav-link collapsed" href="login_page/logout.php">
-      <i class="bi bi-envelope"></i>
+      <i class="bi bi-box-arrow-right"></i>
       <span>Logout</span>
     </a>
   </li><!-- End Contact Page Nav -->
@@ -167,10 +184,10 @@ catch (PDOException $e) {
               <h2><?php echo $name;?></h2>
               <h3><?php ?></h3>
               <div class="social-links mt-2">
-             <a href="deleteuser.php?acdelete=<?php echo $u_id;?>"> <button type="submit" name="submit" class="btn btn-danger btn-sm">Delete Account</button></a>
+            
 
               </div>
-             
+              <a href="deleteuser.php?acdelete=<?php echo $u_id;?>"> <button type="submit" name="submit" class="btn btn-danger btn-sm">Delete Account</button></a> 
             </div>
           </div>
 
