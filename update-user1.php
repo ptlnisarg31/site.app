@@ -12,7 +12,6 @@ $email = $_POST['email'];
 // echo $name;
 // echo $phone;
 // echo $email;
-try {
                     $SQLUpdate = "UPDATE users set `username`='$name', `m_num`='$phone',`email`='$email' WHERE id=$u_id";
 
 //$u_id = $_POST['id'];
@@ -39,8 +38,8 @@ try {
                         echo "Error";
                     }
                 }
-            }
-                catch (PDOException $e) 
+            
+            catch (PDOException $e) 
                 {
                     echo "Error: " . $e->getMessage();
                 }
