@@ -28,15 +28,21 @@ try {
                     $statement = $conn->prepare($SQLUpdate);
                     $statement->execute();
                     $conn->connection = null;
-                    if($statement->rowCount() == 1) {
+                    if($statement->rowCount() == 1) 
+                    {
                         $_SESSION['username']=$name;
                         header("location:user1.php?msg=successfully_edited");
                     
-                    }else{
+                    }
+                    else
+                    {
                         echo "Error";
                     }
                 }
-                catch (PDOException $e) {
+            }
+                catch (PDOException $e) 
+                {
                     echo "Error: " . $e->getMessage();
                 }
+
                 ?>
