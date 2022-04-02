@@ -8,6 +8,12 @@ require_once 'login_page/db_connect.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
+
+// echo $name;
+// echo $phone;
+// echo $email;
+                    $SQLUpdate = "UPDATE users set `username`='$name', `m_num`='$phone',`email`='$email' WHERE id=$u_id";
+
 //$u_id = $_POST['id'];
 
 // echo $name;
@@ -15,20 +21,27 @@ $email = $_POST['email'];
 // echo $email;
             try {
                     $SQLUpdate = "UPDATE users set `username`='$name',`m_num`='$phone',`email`='$email' WHERE id=$u_id";
+
                     
 
                     $statement = $conn->prepare($SQLUpdate);
                     $statement->execute();
                     $conn->connection = null;
-                    if($statement->rowCount() == 1) {
+                    if($statement->rowCount() == 1) 
+                    {
                         $_SESSION['username']=$name;
                         header("location:user1.php?msg=successfully_edited");
                     
-                    }else{
+                    }
+                    else
+                    {
                         echo "Error";
                     }
                 }
-                catch (PDOException $e) {
+            
+            catch (PDOException $e) 
+                {
                     echo "Error: " . $e->getMessage();
                 }
+
                 ?>
