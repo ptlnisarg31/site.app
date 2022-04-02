@@ -13,13 +13,7 @@ if(isset($_POST['signup-btn'])) {
       $query= $conn ->prepare("SELECT * FROM users WHERE username = ?");
       $query->execute([$username]);
       $result =$query->rowCount();
-      if($username==""||$email=""||$password="")
-      {
-        echo "<script>alert('Please enter the required details')</script>";
-        echo "<script>location.href='index.php'</script>";
-      }
-
-      if($result>0){
+         if($result>0){
         // $error = "<spam class = 'text-dangar'>username has already existed! Please choose another one.</spa></p>";
         echo "<script>alert('Username has already existed! Please choose another one.')</script>";
         echo "<script>location.href='index.php'</script>";

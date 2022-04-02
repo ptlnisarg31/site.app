@@ -140,19 +140,15 @@ Survey No.30, Sidsar Road, near Iscon Eleven, Bhavnagar, Gujarat 364001</p>
                 <div class="col-md-6 contact-left-content">
                     <div class="address-con">
                         <h4 class="mb-2"><span class="fa fa-phone-square" aria-hidden="true"></span> Phone</h4>
-                        <p>+121 098 8907 9987</p>
-                        <p>+121 098 8907 9987</p>
+                        <p>+91 9898164311</p>
+                        <p>+91 8888888888</p>
                     </div>
                     <div class="address-con my-4">
                         <h4 class="mb-2"><span class="fa fa-envelope-o" aria-hidden="true"></span> Email </h4>
-                        <p><a href="mailto:info@example.com">info@example.com</a></p>
-                        <p><a href="mailto:info@example.com">info@example.com</a></p>
+                        <p><a href="mailto:info@example.com">mail@minutemaintanance.com</a></p>
+                        <p><a href="mailto:info@example.com">info@minutemaintanance.com</a></p>
                     </div>
-                    <div class="address-con mb-4">
-                        <h4 class="mb-2"><span class="fa fa-fax" aria-hidden="true"></span> Fax</h4>
-
-                        <p>(800) 123-80088</p>
-                    </div>
+                    
                     <div class="address-con">
                         <h4 class="mb-2"><span class="fa fa-map-marker" aria-hidden="true"></span> Location </h4>
 
@@ -263,11 +259,11 @@ Survey No.30, Sidsar Road, near Iscon Eleven, Bhavnagar, Gujarat 364001</p>
                             <div class="contact-info">
                                 <div class="footer-address-inf">
                                     <h4 class="ad-info mb-2">Phone</h4>
-                                    <p>+121 098 8907 9987</p>
+                                    <p>+91 9898164311</p>
                                 </div>
                                 <div class="footer-address-inf my-4">
                                     <h4 class="ad-info mb-2">Email </h4>
-                                    <p><a href="mailto:info@example.com">info@example.com</a></p>
+                                    <p><a href="mailto:info@example.com">mail@minutemaintanance.com</a></p>
                                 </div>
                                 <div class="footer-address-inf">
                                     <h4 class="ad-info mb-2">Location</h4>

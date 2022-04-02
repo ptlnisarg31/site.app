@@ -146,7 +146,7 @@ if(isset($_POST['login-btn'])) {
               Sign up
             </button>
           </div>
-          <img src="img/log.svg" class="image" alt="" />
+         
         </div>
         <div class="panel right-panel">
           <div class="content">
@@ -160,7 +160,7 @@ if(isset($_POST['login-btn'])) {
               Sign in
             </button>
           </div>
-          <img src="img/register.svg" class="image" alt="" />
+        
         </div>
       </div>
     </div>

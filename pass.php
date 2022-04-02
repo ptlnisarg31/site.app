@@ -21,7 +21,7 @@ try {
         if(password_verify($pass, $hashed_password)) {
             $hashed_password = password_hash($newpass, PASSWORD_DEFAULT);
             $conn= mysqli_connect("localhost","root","","login");
-            $sql = "UPDATE `users` SET `password`=' $hashed_password' WHERE id=$u_id";
+            $sql = "UPDATE `users` SET `password`='$hashed_password' WHERE id=$u_id";
             $result= mysqli_query($conn,$sql);
             echo $newpass;
           
