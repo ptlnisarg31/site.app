@@ -1,10 +1,33 @@
 <?php
 session_start();
 $u_id = $_SESSION['id'];
-$name = $_SESSION['username'];
-$m_num = $_SESSION['m_num'];
-$email = $_SESSION['email'];
+// $name = $_SESSION['username'];
+// $m_num = $_SESSION['m_num'];
+// $email = $_SESSION['email'];
 
+try {
+
+  $conn= mysqli_connect("localhost","root","","login");
+  $sql= "SELECT * FROM `users` WHERE `id`=$u_id";
+  $result= mysqli_query($conn,$sql);
+  if (mysqli_num_rows($result) > 0)
+  {
+
+    while($row = mysqli_fetch_array($result) ) 
+    {
+        $name=$row['username'];
+        $_SESSION['username']=$name;
+        $m_num=$row['m_num'];
+        $email=$row['email'];
+  }
+}
+  else{
+      echo "Error";
+  }
+}
+catch (PDOException $e) {
+  echo "Error: " . $e->getMessage();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -140,7 +163,7 @@ $email = $_SESSION['email'];
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-              <img src="../../admin/Admin-Login/<?php echo "img";?>" alt="Profile" class="rounded-circle">
+              <img src="images/user1.old.png" alt="Profile" class="rounded-circle">
               <h2><?php echo $name;?></h2>
               <h3><?php ?></h3>
               <div class="social-links mt-2">
@@ -237,7 +260,7 @@ $email = $_SESSION['email'];
                     <div class="row mb-3">
                       <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
                       <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="<?php echo $name;?>">
+                        <input name="name" type="text" class="form-control" id="name" value="<?php echo $name;?>">
                       </div>
                     </div>
 
