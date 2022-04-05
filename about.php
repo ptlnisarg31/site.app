@@ -71,7 +71,7 @@ session_start();
 					if(!isset($_SESSION['username'])) {
 						?>
 						<li>
-					 <a href="login_page/index.html"> 
+					 <a href="signin_choice.php"> 
 						<?php
 						echo "Login";
 						?></a> 
@@ -89,11 +89,9 @@ session_start();
                     <li>
                         <a href="city-options.php">City</a>
                     </li>
-                    <li>
-                        <a href="login_page/members.php">Join</a>
-                    </li>
+                   
 					<li>
-                      <a href="login_page/user.php">  
+                      <a href="./user1.php">  
 					  <?php
 					if(isset($_SESSION['username'])) {
 					$usn=$_SESSION['username'];
