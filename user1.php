@@ -61,12 +61,7 @@ catch (PDOException $e) {
   <link href="admin/admin-ui/assets/css/style.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: NiceAdmin - v2.2.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+ 
 </head>
 
 <body>
