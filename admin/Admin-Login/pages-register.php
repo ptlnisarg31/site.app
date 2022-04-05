@@ -187,7 +187,7 @@ if(isset($_POST['btn-sub'])) {
                       <label for="yourNumber" class="form-label">Your Number</label>
                       <div class="input-group has-validation">
                       <span class="input-group-text" id="inputGroupPrepend">+91</span>
-                      <input type="number" name="number" class="form-control" id="yourNumber" required>
+                      <input type="number" name="number" class="form-control" id="yourNumber" maxlength="10" required>
                       <div class="invalid-feedback">Please, enter a valid Number!</div>
                       </div>
                     </div>
