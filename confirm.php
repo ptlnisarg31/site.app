@@ -73,7 +73,7 @@ $result= mysqli_query($connn,$sql);
                     <input type="text" name="full-name" placeholder="<?php echo $name; ?>" class="input-responsive" value="<?php echo $name; ?>" required>
 
                     <div class="order-label">Phone Number</div>
-                    <input type="tel" name="contact" placeholder="<?php echo $contact; ?>" class="input-responsive" value="<?php echo $contact; ?>" required>
+                    <input type="number" name="contact" placeholder="<?php echo $contact; ?>" class="input-responsive" value="<?php echo $contact; ?>" maxlength="10" max="0-9" required>
 
                     <div class="order-label">Email</div>
                     <input type="email" name="email" placeholder="<?php echo $email; ?>" class="input-responsive" value="<?php echo $email; ?>" required>
